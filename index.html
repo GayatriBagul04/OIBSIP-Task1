@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <header>
+            <a href="#" class="logo">World of Photography</a>
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="nav-items">
+
+                    <a href="./index.html"></i>Home</a>
+                    <a href="explore.html">Explore</a>
+                    <a href="./images.html">Gallery</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide" src="videos/1.mp4" autoplay muted loop></video>
+        
+        <div class="content">
+            <h1>Peaceful <br><span>Nature</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Suscipit facilis quas minus blanditiis, vero natus quae, veritatis, aperiam magnam nesciunt adipisci aliquid quibusdam expedita porro? Facilis, perferendis. 
+            Quia minima amet error necessitatibus aperiam eius! </p>
+
+            <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        const menubtn = document.querySelectorAll(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menubtn.addEventListener("click", () => {
+            menubtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide")
+
+        var slider = function(manual)
+        {
+        btns.forEach((btn)=> {
+            btn.classList.remove("active");
+        });
+
+        slides.forEach((slide)=> {
+            slide.classList.remove("active");
+        });
+            
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+
+        btns.forEach((btns,i)=> {
+
+            btns.addEventListener("click", () => {
+
+                slider(i);
+
+            });
+        });
+
+
+    </script>
+
+
+    
+</body>
+</html>

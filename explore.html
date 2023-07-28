@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="images.css">
+</head>
+<body>
+    <section id="explore" class="about sec-pad">
+        <div class="main-container">
+          <h2 class="heading heading-sec heading-sec__mb-med">
+            <span class="heading-sec__main">Explore Places</span>
+
+
+            <div class="full-img" id="fullimgbox">
+                <img src="images/1.jpg" id="fullimg">
+        
+                <span onclick="closefullimg()">X</span>
+        
+            </div>
+            <div class="image-gallary">
+                <img src="images/55.jpg" onclick= "openfullimg()">India
+                <img src="images/11.jpg" onclick="openfullimg()">
+                <img src="images/22.jpg" onclick="openfullimg()">
+                <img src="images/33.jpg" onclick="openfullimg()">
+                <img src="images/44.jpg" onclick="openfullimg()">
+        
+            </div>
+        
+            <script>
+        
+                var fullimgbox = document.getElementById("fullimgbox");
+                var fullimg = document.getElementById("fullimg");
+        
+                function openfullimg()
+                {
+                    fullimgbox.images.display = "flex"; 
+                }
+        
+        
+        
+            </script>
+        
+
+
+</body>
+</html>
